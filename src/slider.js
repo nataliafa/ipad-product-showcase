@@ -73,7 +73,7 @@ export default function slider(element) {
     }
   }
 
-  // следит за расподажение бегунка
+  // расположение бегунка
   function checkPosx(x) { 
     let points = {
       toolsLength: sliderToolsLength,
