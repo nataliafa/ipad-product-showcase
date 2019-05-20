@@ -123,7 +123,7 @@ export default function slider(element) {
     sliderWrapper.style.transform = 'translateX(' + transform + '%)';
   }
 
-  // меняет градиент линии в зависимости от положения бегунка
+  // меняет градиент линии  в зависимости от положения бегунка
   function changeLine(position) {
     let sliderSwitchWidth = Number(getComputedStyle(sliderSwitch.querySelector('svg')).width.split('px')[0]);
     let posPercent = Math.ceil(100 * (position + sliderSwitchWidth / 2)/ sliderToolsLength) ;
