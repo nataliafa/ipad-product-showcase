@@ -68,8 +68,8 @@ export default function slider(element) {
       changeLine(x);
       document.removeEventListener('mousemove', drag);
       document.removeEventListener('mouseup', drop);
-      document.removeaddEventListener('touchmove', drag);
-      document.removeaddEventListener('touchend', drop);
+      document.removeEventListener('touchmove', drag);
+      document.removeEventListener('touchend', drop);
     }
   }
 
