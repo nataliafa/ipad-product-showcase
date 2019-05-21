@@ -36,7 +36,7 @@ export default function slider(element) {
       maxX = wrap.offsetLeft + wrap.offsetWidth - elmnt.offsetWidth;
       if (event.type === 'touchstart') {
         event.preventDefault();
-        e = { type: event.changedTouches[0], drag: 'touchmove', drop: 'touchmove'};
+        e = { type: event.changedTouches[0], drag: 'touchmove', drop: 'touchend'};
       } else if (event.type === 'mousedown') {
         e = { type: event, drag: 'mousemove', drop: 'mouseup'};
       }
