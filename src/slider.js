@@ -31,7 +31,6 @@ export default function slider(element) {
 
     // начальные позиции
     function startDrag(event) {
-      // if (!event.target.classList.contains('slider__path')) {return};
       let e;
       minX = wrap.offsetLeft;
       maxX = wrap.offsetLeft + wrap.offsetWidth - elmnt.offsetWidth;
