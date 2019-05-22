@@ -31,11 +31,12 @@ export default function slider(element) {
 
     // начальные позиции
     function startDrag(event) {
+      // if (!event.target.classList.contains('slider__path')) {return};
       let e;
       minX = wrap.offsetLeft;
       maxX = wrap.offsetLeft + wrap.offsetWidth - elmnt.offsetWidth;
       if (event.type === 'touchstart') {
-        e = { type: event.changedTouches[0], drag: 'touchmove', drop: 'touchmove'};
+        e = { type: event.changedTouches[0], drag: 'touchmove', drop: 'touchend'};
       } else if (event.type === 'mousedown') {
         e = { type: event, drag: 'mousemove', drop: 'mouseup'};
       }
@@ -59,12 +60,12 @@ export default function slider(element) {
       x = Math.max(x, minX);
       elmnt.style.left = x + 'px';
       elmnt.style.top = 0 + 'px';
+      let pos = Number(elmnt.style.left.split('px')[0]);
+      checkPosx(pos);
+      changeLine(pos);
     }
   
     function drop() {
-      let x = Number(elmnt.style.left.split('px')[0]);
-      checkPosx(x);
-      changeLine(x);
       document.removeEventListener('mousemove', drag);
       document.removeEventListener('mouseup', drop);
       document.removeEventListener('touchmove', drag);
