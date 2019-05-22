@@ -100,7 +100,6 @@ function fullPage(el) {
 
   // начало прокрутки слайдера
   function touchStartScroll() {
-    // if (event.target.classList.contains('slider__path')) {return};
     let start = event.changedTouches[0].pageY;
 
     const touchMove = throttle(() => {
